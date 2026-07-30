@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: interview-archive
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /login
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
