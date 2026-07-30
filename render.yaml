@@ -4,7 +4,11 @@ services:
     runtime: docker
     plan: free
     autoDeploy: true
-    healthCheckPath: /login
+    healthCheckPath: /articles
     envVars:
       - key: GEMINI_API_KEY
+        sync: false
+      - key: ADMIN_USERNAME
+        value: qky
+      - key: ADMIN_PASSWORD
         sync: false
